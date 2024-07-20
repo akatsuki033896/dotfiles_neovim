@@ -1,5 +1,7 @@
 # dotfiles_neovim
 🧪🧪🧪Neovim config for self development 💉💉💉
+## Screenshots
+![image](https://github.com/TKAK890118/dotfiles_neovim/blob/main/Screenshot1.png)
 ## Requires
 - Neovim >= 0.9.5
 - Nerd Font
