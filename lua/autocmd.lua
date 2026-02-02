@@ -13,7 +13,7 @@ autocmd(
                 --windows compile
                 --"<ESC>:w<CR>:!g++ -std=c++2a %:t:r.cpp -o %:t:r.exe<CR>",
                 --linux compile
-                "<ESC>:w<CR>:!g++ -std=c++2a %:t:r.cpp -o %:t:r.out<CR>",
+                "<ESC>:w<CR>:!g++ -std=c++2a %:t:r.cpp -o %:t:r<CR>",
                 { silent = true, noremap = true }
             )
             bufset(
@@ -23,7 +23,7 @@ autocmd(
                 --windows run
                 --"<ESC>:w<CR>:TermExec direction=horizontal cmd=\"%:t:r.exe\"<CR>",
                 --linux run
-                "<ESC>:w<CR>:TermExec direction=horizontal cmd=\"./%:t:r.out\"<CR>",
+                "<ESC>:w<CR>:TermExec direction=horizontal cmd=\"./%:t:r\"<CR>",
                 { silent = true, noremap = true }
             )
         end,
@@ -43,7 +43,7 @@ autocmd(
                 --windows compile
                 --"<ESC>:w<CR>:!gcc %:t:r.c -o %:t:r.exe<CR>",
                 --linux compile
-                "<ESC>:w<CR>:!gcc %:t:r.c -o %:t:r.out<CR>",
+                "<ESC>:w<CR>:!gcc %:t:r.c -o %:t:r<CR>",
                 { silent = true, noremap = true }
             )
             bufset(
@@ -53,7 +53,7 @@ autocmd(
                 --windows run
                 --"<ESC>:w<CR>:TermExec direction=horizontal cmd=\"%:t:r.exe\"<CR>",
                 --linux run
-                "<ESC>:w<CR>:TermExec direction=horizontal cmd=\"./%:t:r.out\"<CR>",
+                "<ESC>:w<CR>:TermExec direction=horizontal cmd=\"./%:t:r\"<CR>",
                 { silent = true, noremap = true }
             )
         end,

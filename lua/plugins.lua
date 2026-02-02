@@ -26,29 +26,21 @@ require("lazy").setup({
     spec = {
         -- add your plugins here
         {
-            "ramojus/mellifluous.nvim",
-            -- version = "v0.*", -- uncomment for stable config (some features might be missed if/when v1 comes out)
+            'olivercederborg/poimandres.nvim',
+            lazy = false,
+            priority = 1000,
             config = function()
-                require("mellifluous").setup({}) -- optional, see configuration section.
-                vim.cmd("colorscheme mellifluous")
+                require('poimandres').setup {
+                    -- leave this setup function empty for default config
+                    -- or refer to the configuration section
+                    -- for configuration options
+                }
             end,
-        },
-        {
-            "craftzdog/solarized-osaka.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
-        },
-        { 'sainnhe/gruvbox-material' },
-        {
-            "zenbones-theme/zenbones.nvim",
-            -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-            -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-            -- In Vim, compat mode is turned on as Lush only works in Neovim.
-            dependencies = "rktjmp/lush.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
+
+            -- optionally set the colorscheme within lazy config
+            init = function()
+                vim.cmd("colorscheme poimandres")
+            end
         },
         { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
         {

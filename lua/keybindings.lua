@@ -167,11 +167,13 @@ pluginKeys.telescopeList = {
     },
 }
 
---Dashboard
-map("n", "<F1>", ":Dashboard<CR>", opt)
---Mason
-map("n", "<F2>", ":Mason<CR>", opt)
---LSPInfo
-map("n", "<F3>", ":LspInfo<CR>", opt)
+-- Dashboard
+map("n", "<C-1>", ":Dashboard<CR>", opt)
+-- Mason
+map("n", "<C-2>", ":Mason<CR>", opt)
+-- LSPInfo
+map("n", "<C-3>", ":LspInfo<CR>", opt)
+-- Colorizer
+map("n", "<C-4>", "ColorizerToggle<CR>", opt)
 
 return pluginKeys
