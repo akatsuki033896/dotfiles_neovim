@@ -6,6 +6,13 @@ Neovim config for self development
 - [Nerd Font](https://www.nerdfonts.com/)
 - [Warp Terminal](https://warp.dev/)
 
+## Startup
+```sh
+cd ~/.config
+git clone https://github.com/akatsuki033896/dotfiles_neovim.git
+mv dotfiles_nvim nvim
+```
+
 ## Plugins
 ### Plugin Manager
 [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
