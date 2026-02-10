@@ -111,6 +111,8 @@ mv dotfiles_nvim nvim
 | `<C-v>` | Paste                |
 | `<`     | Indentation -4 space |
 | `>`     | Indenfation +4 space |
+| `gc`    | Comment code block   |
+
 ### Insert Mode
 
 | Key     | Effect                         |

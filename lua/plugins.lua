@@ -103,7 +103,11 @@ require("lazy").setup({
                         color = '#DDDDFF',
                         name = "dat"
                     },
-
+                    cmake = {
+                        icon = '',
+                        color = '#FFFFFF',
+                        name = 'cmake'
+                    },
                 })
             end,
         },
@@ -329,15 +333,6 @@ require("lazy").setup({
         {
             "xiyaowong/transparent.nvim",
         },
+        { 'Civitasv/cmake-tools.nvim',  opts = {} },
     },
-    -- Configure any other settings here. See the documentation for more details.
-    -- colorscheme that will be used when installing plugins.
-    install = { colorscheme = { "habamax" } },
-    -- automatically check for plugin updates
-    checker = { enabled = true },
-    ui = {
-        border = "single",
-        -- The backdrop opacity. 0 is fully opaque, 100 is fully transparent.
-        backdrop = 60,
-    }
 })
