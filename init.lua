@@ -14,6 +14,7 @@ require("plugin-config.nvimtree")
 require("plugin-config.bufferline")
 require("plugin-config.dashboard")
 require("plugin-config.cmake-tools")
+require("plugin-config.gitsigns")
 
 if vim.fn.has('nvim-0.11') == 0 then
     error("nvim-lspconfig 0.11+ requires neovim 0.11.3+")

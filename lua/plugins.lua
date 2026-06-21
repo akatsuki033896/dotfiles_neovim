@@ -24,25 +24,7 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
-        -- add your plugins here
-        {
-            'olivercederborg/poimandres.nvim',
-            lazy = false,
-            priority = 1000,
-            config = function()
-                require('poimandres').setup {
-                    -- leave this setup function empty for default config
-                    -- or refer to the configuration section
-                    -- for configuration options
-                }
-            end,
-
-            -- optionally set the colorscheme within lazy config
-            init = function()
-                vim.cmd("colorscheme poimandres")
-            end
-        },
-        { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+        -- add your plugins here 
         {
             'sainnhe/sonokai',
             config = function()
@@ -334,5 +316,6 @@ require("lazy").setup({
             "xiyaowong/transparent.nvim",
         },
         { 'Civitasv/cmake-tools.nvim',  opts = {} },
+        { 'lewis6991/gitsigns.nvim' },
     },
 })
