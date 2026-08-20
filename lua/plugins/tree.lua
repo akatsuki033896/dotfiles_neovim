@@ -1,9 +1,9 @@
-return {{
+return { {
     "nvim-tree/nvim-tree.lua",
     version = "*",
     lazy = true,
-    cmd = {"NvimTreeOpen", "NvimTreeToggle", "NvimTreeFindFile"},
-    dependencies = {"nvim-tree/nvim-web-devicons"},
+    cmd = { "NvimTreeOpen", "NvimTreeToggle", "NvimTreeFindFile" },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     init = function()
         -- Disable netrw at the very start
         vim.g.loaded_netrw = 1
@@ -28,4 +28,4 @@ return {{
             }
         })
     end
-}}
+} }
