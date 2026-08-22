@@ -24,7 +24,13 @@ return { {
                 group_empty = true
             },
             filters = {
-                dotfiles = true
+                dotfiles = false, -- '.'开头文件默认不显示 关闭功能
+            },
+            actions = {
+                open_file = {
+                    resize_window = true,
+                    quit_on_open = true
+                },
             }
         })
     end

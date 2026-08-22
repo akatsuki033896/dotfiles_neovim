@@ -9,6 +9,8 @@ local opt = { noremap = true, silent = true }
 --格式化代码
 vim.keymap.set('n', '<C-x>', vim.lsp.buf.format, {})
 
+-- 退出
+map("n", "q", ":q<CR>", opt)
 -- 取消 s 默认功能
 map("n", "s", "", opt)
 -- windows 分屏快捷键
@@ -81,5 +83,68 @@ pluginKeys.nvimTreeList = {
     { key = "p",                              action = "paste" },
     { key = "s",                              action = "system_open" },
 }
+
+-- cmp
+pluginKeys.cmp = function(cmp)
+    return {
+        -- Show completion
+        ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+        -- Hide completion
+        ["<A-,>"] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close()
+        }),
+        -- previous suggestion
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
+        -- next suggestion
+        ["<C-j>"] = cmp.mapping.select_next_item(),
+        -- confirm suggestion
+        ["<CR>"] = cmp.mapping.confirm({
+            select = true,
+            behavior = cmp.ConfirmBehavior.Replace
+        }),
+        -- scroll
+        ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+        ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+    }
+end
+
+-- bufferline
+map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<C-w>", ":bdelete!<CR>", opt)
+
+-- toggleterm
+pluginKeys.mapToggleTerm = function(toggleterm)
+    vim.keymap.set({ "n", "t" }, "<leader>ta", toggleterm.toggleA)
+    vim.keymap.set({ "n", "t" }, "<leader>tb", toggleterm.toggleB)
+    vim.keymap.set({ "n", "t" }, "<leader>tc", toggleterm.toggleC)
+end
+
+-- neovim lsp feature
+-- gra  Code Action
+-- gri  Implementation
+-- grn  Rename
+-- grr  References
+-- grt  Type Definition
+-- grx  CodeLens
+-- gO   Document Symbols
+-- <C-S> Signature Help
+
+-- Telescope
+-- 查找文件
+map("n", "<leader>ff", ":Telescope find_files<CR>", opt)
+-- 全局搜索
+map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>fb", ":Telescope buffers<CR>", opt)
+
+vim.o.foldcolumn = '1' -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
+-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+-- vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+-- vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 return pluginKeys
