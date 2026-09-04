@@ -1,11 +1,12 @@
-## nvim-treesitter
+# README
 
-dependencies(WINDOWS): LLVM, cargo(rustup-init.exe)
+## alacritty(0.17)
 
-### install tree-sitter-cli
+windows: `%APPDATA/alacritty`
+unix: `~/.config/alacritty`
 
-windows使用rust的cargo安装，让cargo可以找到`libclang.dll`，添加一个新的环境变量，unix环境使用系统自带的包管理器安装
+## neovim(0.12.4)
 
-```bash
-$env:LIBCLANG_PATH="YOUR_PATH_TO_LLVM\LLVM\bin"
-```
+windows/unix: `~/.config`
+
+
