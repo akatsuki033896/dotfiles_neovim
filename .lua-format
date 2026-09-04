@@ -1,0 +1,13 @@
+# 缩进与宽度
+indent_width: 4           # 每次缩进的空格数
+tab_width: 4              # Tab 键对应的空格数
+column_limit: 120         # 单行最大字符限制，超过会尝试换行
+
+# 语句与空格样式
+continuation_indent_width: 4 # 续行缩进宽度
+spaces_before_call: 1     # 函数调用括号前的空格数 (0 或 1)
+
+# 表（Table）与换行规则
+chop_down_kv_table: true  # 键值对较多时，Table 是否强制折行换行
+align_table_field: true   # 是否对齐 Table 字段
+

@@ -1,24 +1,16 @@
-require("plugins")
-require("basic")
-require("keybindings")
-require("autocmd")
+require("config.keybindings")
+require("config.basic")
+require("config.lazy")
+require("config.lsp")
+require("config.autocmd")
 
-require("lsp.cmp")
-require("lsp.setup")
-require("lsp.ui")
-
-require("plugin-config.autopairs")
-require("plugin-config.toggleterm")
-require("plugin-config.lualine")
-require("plugin-config.nvimtree")
-require("plugin-config.bufferline")
-require("plugin-config.dashboard")
-require("plugin-config.cmake-tools")
-require("plugin-config.gitsigns")
-
-if vim.fn.has('nvim-0.11') == 0 then
-    error("nvim-lspconfig 0.11+ requires neovim 0.11.3+")
-end
+require("plugins.treesitter") -- 语法高亮
+require("plugins.tree") -- 文件树
+require("plugins.gitsigns") -- git提示
+require("plugins.autopairs")
+require("plugins.mason")
+require("plugins.cmp")
+require("plugins.ibl")
+require("plugins.luasnip")
 
 vim.cmd[[colorscheme tokyonight-night]]
-vim.cmd[[TransparentEnable]]
