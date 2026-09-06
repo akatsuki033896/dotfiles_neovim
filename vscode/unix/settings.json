@@ -1,0 +1,148 @@
+{
+    "code-runner.runInTerminal": true,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "BlexMono Nerd Font",
+    "editor.codeLensFontFamily": "BlexMono Nerd Font",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "BlexMono Nerd Font",
+    "workbench.editorAssociations": {
+        "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+        "*.qrc": "qt-core.qrcEditor"
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+    },
+    // macos Qt path
+    "qt-core.qtInstallationRoot": "/Users/akatsuki/Qt",
+    "debug.allowBreakpointsEverywhere": true,
+    "workbench.productIconTheme": "icons-carbon",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    // vim
+    "vim.leader": "<space>",
+    "vim.useCtrlKeys": true,
+    // normal mode
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-x>"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "s"
+            ],
+            "after": []
+        },
+        {
+            "before": [
+                "s",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.splitEditorRight"
+            ]
+        },
+        {
+            "before": [
+                "<A-h>"
+            ],
+            "commands": [
+                "workbench.action.navigateLeft"
+            ]
+        },
+        {
+            "before": [
+                "<A-j>"
+            ],
+            "commands": [
+                "workbench.action.navigateDown"
+            ]
+        },
+        {
+            "before": [
+                "<A-k>"
+            ],
+            "commands": [
+                "workbench.action.navigateUp"
+            ]
+        },
+        {
+            "before": [
+                "<A-l>"
+            ],
+            "commands": [
+                "workbench.action.navigateRight"
+            ]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-x>": true,
+        "<C-h>": true,
+        "<C-l>": true
+    },
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                "cursorLineStart"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                "cursorLineEnd"
+            ]
+        }
+    ],
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f87",
+        "statusBar.noFolderBackground": "#005f87",
+        "statusBar.debuggingBackground": "#005f87",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.insert": [
+        "#3d34bd",
+        "#ffffff"
+    ],
+    "vim.statusBarColors.normal": [
+        "#2fb2b2",
+        "#ffffff"
+    ],
+    "vim.statusBarColors.visual": [
+        "#5f00af",
+        "#ffffff"
+    ]
+}
